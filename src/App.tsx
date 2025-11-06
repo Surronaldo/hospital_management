@@ -66,15 +66,6 @@ function Login({ onLoggedIn }: { onLoggedIn: (u: User) => void }) {
   return (
     <div className="card login-card">
       <h2>Sign in</h2>
-      <p className="muted">Seed users exist so you can test quickly:</p>
-      <ul className="muted small">
-        <li>
-          Patient → <code>alice</code> / <code>patient123</code>
-        </li>
-        <li>
-          Doctor → <code>drbob</code> / <code>doctor123</code>
-        </li>
-      </ul>
       <form onSubmit={handleSubmit} className="col gap-8">
         <label className="col">
           <span>Username</span>
@@ -417,11 +408,6 @@ export default function App() {
 
         {user && user.role === roles.Doctor && <DoctorDashboard user={user} />}
       </main>
-      <footer className="app-footer">
-        <span className="muted small">
-          Demo app — data persists in your browser&apos;s localStorage.
-        </span>
-      </footer>
     </div>
   );
 }

@@ -48,8 +48,8 @@ function Header({
 }
 
 function Login({ onLoggedIn }: { onLoggedIn: (u: User) => void }) {
-  const [username, setUsername] = useState("alice");
-  const [password, setPassword] = useState("patient123");
+  const [username, setUsername] = useState();
+  const [password, setPassword] = useState();
   const [error, setError] = useState<string | null>(null);
 
   function handleSubmit(e: React.FormEvent) {
